@@ -67,6 +67,22 @@ const DetailWrapper = styled.div`
     ul{
         margin-top: 2rem;
     }
+
+    @media screen and (max-width: 650px){
+        display: block;
+        margin-top: 2rem;
+        h2{
+            margin-bottom: 1rem;
+            font-size:1rem;
+        }
+        img{
+            width:100%;
+        }
+        h3{
+            font-size: 0.8rem;
+            line-height: 2;
+        }
+    }
 `;
 
 const Button = styled.button`
@@ -76,11 +92,15 @@ const Button = styled.button`
     border: 2px solid black;
     margin-right: 2rem;
     font-weight: 600;
+
 `;
 
 const Info = styled.div`
     margin-left : 10rem;
-
+    
+    @media screen and (max-width: 650px){
+        margin-left : 1rem;
+    }
 `;
 
 export default Recipe
