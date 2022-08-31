@@ -31,6 +31,7 @@ const List = styled.div`
     display: flex;
     justify-content: center;
     margin: 2rem 0rem;
+
 `
 
 const SLink = styled(NavLink)`
@@ -66,6 +67,11 @@ const SLink = styled(NavLink)`
         h4{
             color: white;
         }
+    }
+
+    @media screen and (max-width: 650px){
+        padding: 2rem;
+        margin: 0;
     }
 `
 

@@ -34,9 +34,17 @@ const Popular = () => {
           <Wrapper>
             <h3>Popular Picks</h3>
             <Splide options={
-              {perPage : 4,
-                arrows : false,
-                pagination : false,
+              {perPage : 3,
+                breakpoints: {
+                  640: {
+                    perPage: 1,
+                  },
+                  950: {
+                    perPage: 2,
+                  },
+                },
+                arrows : true,
+                pagination : true,
                 drag : "free",
                 gap : '5rem'
               }
@@ -64,6 +72,12 @@ const Popular = () => {
 
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+
+  @media screen and (max-width: 650px){
+    h3{
+      font-size: 1.25rem;
+    }
+  }
 `;
 
 const Card = styled.div`
@@ -79,6 +93,7 @@ const Card = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+ 
   }
 
   p{
@@ -97,6 +112,10 @@ const Card = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  @media screen and (max-width: 650px){
+    min-height: 15rem;
+    }
 `;
 
 const Gradient = styled.div`

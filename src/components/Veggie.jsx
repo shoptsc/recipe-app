@@ -35,8 +35,16 @@ const Veggie = () => {
             <h3>Our Vegetarian Picks</h3>
             <Splide options={
               {perPage : 3,
-                arrows : false,
-                pagination : false,
+                breakpoints: {
+                  640: {
+                    perPage: 1,
+                  },
+                  950: {
+                    perPage: 2,
+                  },
+                },
+                arrows : true,
+                pagination : true,
                 drag : "free",
                 gap : '5rem'
               }
@@ -65,6 +73,12 @@ const Veggie = () => {
 
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+
+  @media screen and (max-width: 650px){
+    h3{
+      font-size: 1.25rem;
+    }
+  }
 `;
 
 const Card = styled.div`
@@ -98,6 +112,10 @@ const Card = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  @media screen and (max-width: 650px){
+    min-height: 15rem;
+    }
 `;
 
 const Gradient = styled.div`

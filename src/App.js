@@ -30,6 +30,7 @@ const Logo = styled.div`
   font-size: 1.5rem;
   font-weight: 400;
   font-family: "Lobster Two", cursive;
+  
 `
 
 const Nav = styled.div`
@@ -39,6 +40,10 @@ const Nav = styled.div`
   align-items: center
   svg{
     font-size: 2rem;
+  }
+
+  @media screen and (max-width: 650px){
+    padding: 2rem 0rem;
   }
 `
 

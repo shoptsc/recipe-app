@@ -24,7 +24,7 @@ const Search = () => {
 }
 
 const FormStyle = styled.form`
-    margin: 0rem 20rem;
+    margin: 0;
     div{
         position: relative;
         width: 100%;
@@ -45,6 +45,10 @@ const FormStyle = styled.form`
         left: 0%;
         transform: translate(100%, -50%);
         color: white;
+    }
+
+    @media screen and (min-width: 950px){
+        margin: 0rem 20rem;
     }
 `
 
